@@ -4,15 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff !important;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-link {
+            color: #495057 !important;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #e2e8f0, #f8fafc);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero-section img {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-section img:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-            <img src="~/images/GSchibi.png" alt=""  style="width: 50px; height: auto;">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#">
+                <img src="~/images/GSchibi.png" alt="" style="width: 50px; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -23,7 +118,7 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Uma" asp-action="List">Lista</a>
                     </li>
-                    <li clas="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" asp-controller="Uma" asp-action="Details">Detalles</a>
                     </li>
                 </ul>
@@ -31,51 +126,47 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-  <section class="bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 d-flex justify-content-center" style="margin: auto;">
-                <img src="https://cdn2.steamgriddb.com/logo_thumb/66d91d4433fee7788003cc720ac4f805.png" 
-                     alt="Imagen principal" class="img-fluid rounded">
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <img src="https://cdn2.steamgriddb.com/logo_thumb/66d91d4433fee7788003cc720ac4f805.png" alt="Imagen principal" class="img-fluid">
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
-
-    <!-- Servicios -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Lo que puedes hacer</h2>
+            <h2 class="text-center mb-5 fw-bold">Lo que puedes hacer</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Listar</h5>
-                            <img src="https://umamusu.wiki/w/images/1/11/ES-W02bVAAAB57v.jpg" class="img-fluid rounded">
-                            <p class="card-text" style="margin-top: 20px;">Ver todas las Umamusume.</p>
-                            <a class="btn btn-primary" asp-controller="Uma" asp-action="List">Ver</a>
+                    <div class="card h-100 service-card">
+                        <div class="card-body text-center d-flex flex-column align-items-center">
+                            <h5 class="card-title fw-bold">Listar</h5>
+                            <img src="https://umamusu.wiki/w/images/1/11/ES-W02bVAAAB57v.jpg" class="img-fluid rounded mb-3">
+                            <p class="card-text flex-grow-1">Ver todas las Umamusume.</p>
+                            <a class="btn btn-primary mt-auto" asp-controller="Uma" asp-action="List">Ver</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Buscar</h5>
-                            <img src="https://umamusu.wiki/w/images/0/05/2020_11_mile_champ.jpg" class="img-fluid rounded">
-                            <p class="card-text" style="margin-top: 20px;">Elige que Uma quieres conocer.</p>
-                            <a class="btn btn-primary" asp-controller="Uma" asp-action="Find">Empezar a buscar</a>
+                    <div class="card h-100 service-card">
+                        <div class="card-body text-center d-flex flex-column align-items-center">
+                            <h5 class="card-title fw-bold">Buscar</h5>
+                            <img src="https://umamusu.wiki/w/images/0/05/2020_11_mile_champ.jpg" class="img-fluid rounded mb-3">
+                            <p class="card-text flex-grow-1">Elige que Uma quieres conocer.</p>
+                            <a class="btn btn-primary mt-auto" asp-controller="Uma" asp-action="Find">Empezar a buscar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Detalles</h5>
-                            <img src="https://umamusu.wiki/w/images/c/c9/2021_04_haruten.jpg" class="img-fluid rounded">
-                            <p class="card-text" style="margin-top: 20px;">Detalles de la pagina</p>
-                            <a class="btn btn-primary" asp-controller="Uma" asp-action="Details">Detalles</a>
+                    <div class="card h-100 service-card">
+                        <div class="card-body text-center d-flex flex-column align-items-center">
+                            <h5 class="card-title fw-bold">Detalles</h5>
+                            <img src="https://umamusu.wiki/w/images/c/c9/2021_04_haruten.jpg" class="img-fluid rounded mb-3">
+                            <p class="card-text flex-grow-1">Detalles de la pagina</p>
+                            <a class="btn btn-primary mt-auto" asp-controller="Uma" asp-action="Details">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -83,22 +174,20 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2025 Mi Sitio. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-white me-3">Política de Privacidad</a>
-                    <a href="#" class="text-white">Términos y Condiciones</a>
+                    <a href="#" class="me-3">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

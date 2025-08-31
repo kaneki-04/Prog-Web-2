@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1\\Tarea1.csproj": {}
+    "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1 (Vistas)\\Tarea1.csproj": {}
   },
   "projects": {
-    "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1\\Tarea1.csproj": {
+    "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1 (Vistas)\\Tarea1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1\\Tarea1.csproj",
+        "projectUniqueName": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1 (Vistas)\\Tarea1.csproj",
         "projectName": "Tarea1",
-        "projectPath": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1\\Tarea1.csproj",
+        "projectPath": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1 (Vistas)\\Tarea1.csproj",
         "packagesPath": "C:\\Users\\kvin1\\.nuget\\packages\\",
-        "outputPath": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1\\obj\\",
+        "outputPath": "C:\\Kevin\\Cosas\\TAREAS\\Tareas 2025 SEG\\Web2\\Git\\Prog-Web-2\\Tarea1 (Vistas)\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

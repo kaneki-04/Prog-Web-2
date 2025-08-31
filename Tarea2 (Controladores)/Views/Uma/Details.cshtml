@@ -1,4 +1,72 @@
 @{
     ViewData["Title"] = "Details";
 }
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f2f5;
+    }
 
+    .container {
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: 700;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #495057;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 20px auto;
+    }
+
+    .info-card {
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        border: 1px solid #e9ecef;
+        margin-bottom: 20px;
+    }
+
+    .info-card h3 {
+        color: #343a40;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+</style>
+
+<div class="container">
+    <h1>Detalles del Proyecto</h1>
+    <p>
+        Este proyecto es una aplicación web ASP.NET MVC desarrollada para la Tarea 2. Su objetivo es
+        proporcionar información sobre personajes del universo de Umamusume.
+    </p>
+    <div class="info-card">
+        <h3>Funcionalidades Clave</h3>
+        <p>
+            El sitio permite a los usuarios buscar y listar personajes de Umamusume. Cada personaje tiene
+            detalles como nombre en inglés y japonés, categoría y colores distintivos.
+        </p>
+    </div>
+    <div class="info-card">
+        <h3>Tecnologías Utilizadas</h3>
+        <p>
+            El proyecto está construido con ASP.NET Core MVC. Se utiliza Bootstrap 5 para el diseño
+            responsivo y la interfaz de usuario, lo que garantiza una apariencia moderna y adaptativa en
+            cualquier dispositivo.
+        </p>
+    </div>
+    <p class="mt-4">
+        ¡Esperamos que disfrutes explorando a tus personajes favoritos de Umamusume!
+    </p>
+</div>
